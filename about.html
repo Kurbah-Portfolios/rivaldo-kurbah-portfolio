@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Rivaldo Kurbah</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+    }
+
+    body{
+        background:#0f172a;
+        color:white;
+    }
+
+    header{
+        background:#020617;
+        padding:20px 0;
+    }
+
+    .container{
+        width:90%;
+        max-width:1200px;
+        margin:auto;
+    }
+
+    nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .logo{
+        color:#38bdf8;
+        font-size:1.5rem;
+        font-weight:700;
+    }
+
+    .nav-links{
+        display:flex;
+        gap:20px;
+    }
+
+    .nav-links a{
+        color:white;
+        text-decoration:none;
+        transition:0.3s;
+    }
+
+    .nav-links a:hover{
+        color:#38bdf8;
+    }
+
+    .hero{
+        text-align:center;
+        padding:80px 0 40px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+        color:#38bdf8;
+        margin-bottom:10px;
+    }
+
+    .hero p{
+        color:#cbd5e1;
+        font-size:1.1rem;
+    }
+
+    .card{
+        background:#1e293b;
+        padding:35px;
+        border-radius:15px;
+        margin-bottom:25px;
+    }
+
+    .card h2{
+        color:#38bdf8;
+        margin-bottom:15px;
+    }
+
+    .card p{
+        color:#cbd5e1;
+        line-height:1.9;
+    }
+
+    .interest-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+        margin-top:20px;
+    }
+
+    .interest{
+        background:#0f172a;
+        border:1px solid #38bdf8;
+        padding:20px;
+        border-radius:10px;
+        text-align:center;
+    }
+
+    footer{
+        background:#020617;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+
+    @media(max-width:768px){
+        nav{
+            flex-direction:column;
+            gap:15px;
+        }
+
+        .nav-links{
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .hero h1{
+            font-size:2.2rem;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+    <nav>
+
+        <div class="logo">RK</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </nav>
+
+</div>
+
+
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Cybersecurity Enthusiast • Security Researcher • AI Security Explorer</p>
+    </div>
+</section>
+
+<div class="container">
+
+
+<div class="card">
+
+    <h2>Who I Am</h2>
+
+    <p>
+        Hello, I'm <strong>Rivaldo Kurbah</strong>, a passionate cybersecurity enthusiast
+        focused on protecting systems, networks, and digital assets from evolving threats.
+        I enjoy learning, researching, and building practical security solutions that help
+        improve cybersecurity awareness and defense capabilities.
+    </p>
+
+</div>
+
+<div class="card">
+
+    <h2>My Mission</h2>
+
+    <p>
+        My goal is to contribute to the cybersecurity community by developing innovative
+        security tools, conducting research, and exploring how Artificial Intelligence can
+        strengthen modern cyber defense strategies.
+    </p>
+
+</div>
+
+<div class="card">
+
+    <h2>Areas of Interest</h2>
+
+    <div class="interest-grid">
+
+        <div class="interest">SOC Operations</div>
+        <div class="interest">Threat Hunting</div>
+        <div class="interest">Digital Forensics</div>
+        <div class="interest">Incident Response</div>
+        <div class="interest">Malware Analysis</div>
+        <div class="interest">Network Security</div>
+        <div class="interest">AI Security</div>
+        <div class="interest">Secure Software Development</div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Current Focus</h2>
+
+    <p>
+        Currently working on cybersecurity projects, AI-powered security tools,
+        Windows security assessments, and expanding knowledge in advanced
+        cybersecurity operations, automation, and threat intelligence.
+    </p>
+
+</div>
+
+
+</div>
+
+<footer>
+    © 2026 Rivaldo Kurbah | Cybersecurity Portfolio
+</footer>
+
+</body>
+</html>

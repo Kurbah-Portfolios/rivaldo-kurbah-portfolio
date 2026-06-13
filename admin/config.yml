@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: cybsec-ops/cybsec-ops.github.io
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "certificates"
+    label: "Certificates"
+    folder: "data/certificates"
+    create: true
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
