@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1024" role="img" aria-labelledby="title desc">
+<title id="title">CHARIS Integral Formation Program Certificate - Rivaldo Kurbah</title>
+<desc id="desc">Certificate issued by CHARIS Catholic Charismatic Renewal International Service to Rivaldo Kurbah for the Integral Formation Program, issued 2023-11-06.</desc>
+<defs>
+  <pattern id="waves" width="220" height="46" patternUnits="userSpaceOnUse">
+    <path d="M-20 23 C35 2,85 44,140 23 S245 2,300 23" fill="none" stroke="#dfe8ef" stroke-width="1.2" opacity="0.72"/>
+  </pattern>
+  <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd21a"/>
+    <stop offset="0.48" stop-color="#ff8a00"/>
+    <stop offset="1" stop-color="#e43b21"/>
+  </linearGradient>
+</defs>
+<rect width="1448" height="1024" fill="#fff"/>
+<rect width="1448" height="1024" fill="url(#waves)"/>
+<rect x="28" y="28" width="1392" height="968" fill="none" stroke="#8fc3df" stroke-width="2"/>
+<rect x="56" y="56" width="1336" height="912" fill="none" stroke="#0876b9" stroke-width="4"/>
+
+<text x="724" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="700" fill="#1f2933">CERTIFICATE</text>
+<text x="724" y="292" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#374151">This is to certify that</text>
+<text x="724" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#1976b8">Rivaldo Kurbah</text>
+<text x="724" y="472" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#374151">has finalised the online course, fulfilling all the requirements of the</text>
+<text x="724" y="532" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#1f2933">Integral Formation Program</text>
+
+<!-- Simplified CHARIS emblem -->
+<g transform="translate(724 692)">
+  <path d="M0 -53 C25 -35,31 -12,18 11 C11 24,2 37,0 52 C-15 40,-27 24,-25 5 C-23 -15,-12 -30,0 -53Z" fill="url(#flame)"/>
+  <path d="M-5 18 C5 6,5 -7,-1 -18 C18 -7,24 8,16 24 C10 35,2 42,-3 49 C-8 39,-12 31,-5 18Z" fill="#fff" opacity="0.92"/>
+  <path d="M31 -49 A61 61 0 0 1 63 8" fill="none" stroke="#2a9de2" stroke-width="9" stroke-linecap="round"/>
+  <path d="M35 -31 L59 -15 M43 -5 L67 -3 M35 20 L59 34" stroke="#2a9de2" stroke-width="7" stroke-linecap="round"/>
+  <path d="M20 -56 q11 7 21 0" fill="none" stroke="#ffc400" stroke-width="4" stroke-linecap="round"/>
+</g>
+<text x="724" y="786" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#23364d">CHARIS</text>
+<text x="724" y="822" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#374151">CATHOLIC CHARISMATIC RENEWAL</text>
+<text x="724" y="852" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#374151">INTERNATIONAL SERVICE</text>
+
+<!-- Moderator signature area -->
+<text x="235" y="786" text-anchor="middle" font-family="'Brush Script MT','Segoe Script',cursive" font-size="46" font-style="italic" fill="#111">Pino Scafuro</text>
+<path d="M118 803 C180 788,244 814,350 796" fill="none" stroke="#111" stroke-width="3"/>
+<text x="235" y="842" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#374151">CHARIS MODERATOR</text>
+<text x="145" y="924" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#374151">Issued: 2023-11-06</text>
+
+<!-- Achievement seal -->
+<g transform="translate(1198 786)" opacity="0.72">
+  <circle r="82" fill="none" stroke="#91a6b5" stroke-width="2.6"/>
+  <circle r="72" fill="none" stroke="#b0c1cc" stroke-width="1.5"/>
+  <text y="-18" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#718696">CERTIFICATE OF</text>
+  <text y="10" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#718696">ACHIEVEMENT</text>
+  <text y="45" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="7" fill="#8197a6">★★★★★</text>
+</g>
+<text x="1070" y="924" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#374151">Certificate ID: g04ywiqhfw</text>
+</svg>
