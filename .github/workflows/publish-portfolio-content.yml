@@ -12,13 +12,13 @@ jobs:
   publish:
     if: >-
       github.event.issue.user.login == 'KurbahTech' &&
-      (startsWith(github.event.issue.title, '[Portfolio Certificate]') ||
-       startsWith(github.event.issue.title, '[Faith Portfolio]'))
+      ((contains(github.event.issue.body, '### Certificate / program name') && contains(github.event.issue.body, '### Certificate image')) ||
+       (contains(github.event.issue.body, '### Item type') && contains(github.event.issue.body, '### Image')))
     runs-on: ubuntu-latest
     env:
       ISSUE_BODY: ${{ github.event.issue.body }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
-      CONTENT_KIND: ${{ startsWith(github.event.issue.title, '[Portfolio Certificate]') && 'certificate' || 'faith' }}
+      CONTENT_KIND: ${{ contains(github.event.issue.body, '### Certificate / program name') && 'certificate' || 'faith' }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Check out portfolio
