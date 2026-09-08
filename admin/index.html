@@ -1,10 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio Admin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Portfolio Owner Console | Rivaldo Kurbah</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1220;color:#f8fafc;font-family:'Poppins',sans-serif;line-height:1.65}.wrap{width:90%;max-width:980px;margin:auto;padding:65px 0}.badge{display:inline-block;border:1px solid #334155;border-radius:999px;padding:6px 12px;color:#94a3b8;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(2.3rem,6vw,4rem);margin:18px 0 12px;color:#38bdf8}.hero p{max-width:780px;color:#cbd5e1}.security{margin:28px 0;background:#111827;border:1px solid #334155;border-radius:16px;padding:20px;color:#cbd5e1}.security strong{color:#facc15}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:32px}.card{background:#111827;border:1px solid #334155;border-radius:18px;padding:28px}.card h2{margin:0 0 10px}.card p{color:#94a3b8}.btn{display:inline-block;margin-top:15px;text-decoration:none;background:#38bdf8;color:#06121b;padding:12px 17px;border-radius:9px;font-weight:700}.btn.secondary{background:transparent;border:1px solid #475569;color:#e2e8f0;margin-left:7px}.steps{margin-top:34px;background:#0f172a;border:1px solid #243244;border-radius:16px;padding:24px}.steps ol{padding-left:23px}.steps li{margin:9px 0;color:#cbd5e1}.small{margin-top:28px;color:#64748b;font-size:.85rem}.back{display:inline-block;margin-top:28px;color:#38bdf8;text-decoration:none}@media(max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding-top:38px}.btn.secondary{margin-left:0}}
+</style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<main class="wrap">
+<section class="hero"><span class="badge">Owner Publishing Console</span><h1>Update Your Portfolio</h1><p>Add new certificates, faith-formation credentials, Catholic posters, ministry communications and faith-based digital work without editing the website HTML.</p></section>
+<div class="security"><strong>Owner-only publishing:</strong> submissions are processed automatically only when the GitHub issue is created by the <strong>KurbahTech</strong> account. No GitHub token is stored in this page.</div>
+<section class="grid">
+<article class="card"><h2>Certificates</h2><p>Upload a certificate image, add the provider heading, certificate/program name, optional verification URL and optional “Want to Know More” link.</p><a class="btn" href="https://github.com/Kurbah-Portfolios/rivaldo-kurbah-portfolio/issues/new?template=add-certificate.yml" target="_blank" rel="noopener">Add Certificate</a><a class="btn secondary" href="../certifications.html">View Page</a></article>
+<article class="card"><h2>Faith &amp; Ministry</h2><p>Add formation credentials, Catholic posters, Church/youth communications, Bible convention material, Divine Mercy projects or faith-based digital work.</p><a class="btn" href="https://github.com/Kurbah-Portfolios/rivaldo-kurbah-portfolio/issues/new?template=add-faith-item.yml" target="_blank" rel="noopener">Add Faith Item</a><a class="btn secondary" href="../faith-creative-ministry.html">View Page</a></article>
+</section>
+<section class="steps"><h2>How publishing works</h2><ol><li>Open the appropriate form while signed in to GitHub as <strong>KurbahTech</strong>.</li><li>Fill in the details and drag the image into the image field.</li><li>Submit the form.</li><li>GitHub Actions copies the image into this portfolio repository, updates the relevant JSON data file and commits the change to <strong>main</strong>.</li><li>The submission is closed automatically after a successful publish. GitHub Pages then refreshes the public page.</li></ol></section>
+<p class="small">This console is intentionally not linked from the public navigation. The page itself is not the authentication boundary; GitHub account verification in the publishing workflow is the security control.</p>
+<a class="back" href="../index.html">← Back to portfolio</a>
+</main>
 </body>
 </html>
