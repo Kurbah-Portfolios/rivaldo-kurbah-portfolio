@@ -1,8 +1,6 @@
 name: Add faith & ministry portfolio item
 description: Owner-only publishing form for adding formation credentials or ministry work to the Faith & Creative Ministry page.
 title: "[Faith Portfolio] "
-labels:
-  - portfolio-faith
 body:
   - type: markdown
     attributes:
