@@ -13,9 +13,10 @@ header{background:#020617;padding:20px 0}nav{display:flex;justify-content:space-
 .contact-section{padding:65px 0 35px}.page-intro{text-align:center;max-width:800px;margin:0 auto 38px}.page-intro h1{font-size:clamp(2.2rem,5vw,3.4rem);color:#38bdf8;margin-bottom:12px}.page-intro p{color:#cbd5e1;font-size:1.05rem}
 .contact-container{width:100%;max-width:1050px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:32px}.contact-info,.contact-form{background:#1e293b;padding:35px;border-radius:15px;border:1px solid #334155}.contact-info h2,.contact-form h2{color:#38bdf8;margin-bottom:18px}.contact-info p,.contact-form p{color:#cbd5e1;margin-bottom:18px;line-height:1.8}.contact-item{margin-bottom:20px;color:#e2e8f0}.contact-item strong{color:#38bdf8}
 .copy-btn{margin-top:8px;background:transparent;border:1px solid #475569;color:#e2e8f0;padding:9px 12px;border-radius:8px;cursor:pointer}.copy-btn:hover{border-color:#38bdf8;color:#38bdf8}
-form{display:flex;flex-direction:column}label{font-size:.86rem;color:#cbd5e1;margin-bottom:6px}input,textarea,select{background:#0f172a;border:1px solid #334155;color:white;padding:14px;margin-bottom:15px;border-radius:8px;outline:none}input:focus,textarea:focus,select:focus{border-color:#38bdf8}button[type=submit]{background:#38bdf8;color:black;border:none;padding:15px;border-radius:8px;font-weight:700;cursor:pointer;transition:.3s}button[type=submit]:hover{transform:translateY(-2px)}
+form{display:flex;flex-direction:column}label{font-size:.86rem;color:#cbd5e1;margin-bottom:6px}input,textarea,select{background:#0f172a;border:1px solid #334155;color:white;padding:14px;margin-bottom:15px;border-radius:8px;outline:none}input:focus,textarea:focus,select:focus{border-color:#38bdf8}button[type=submit]{background:#25D366;color:#062b15;border:none;padding:15px;border-radius:8px;font-weight:700;cursor:pointer;transition:.3s}button[type=submit]:hover{transform:translateY(-2px)}
 .form-note{font-size:.8rem;color:#94a3b8!important;margin-top:12px!important}.social-links{margin-top:20px;display:flex;gap:14px;flex-wrap:wrap}.social-links a{display:inline-block;text-decoration:none;color:#38bdf8}.social-links a:hover{text-decoration:underline}
 .quick-links{padding:25px 0 75px}.quick-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quick-card{background:#111827;border:1px solid #334155;border-radius:16px;padding:24px}.quick-card h3{margin-bottom:8px}.quick-card p{color:#94a3b8;font-size:.9rem}.quick-card a{display:inline-block;margin-top:12px;color:#38bdf8;text-decoration:none;font-weight:600}.quick-card a:hover{text-decoration:underline}.quick-card.ministry{border-color:#facc15}.quick-card.ministry h3{color:#facc15}.quick-card.website{border-color:#1dbf73}.quick-card.website h3{color:#1dbf73}.quick-card.insurance{border-color:#38bdf8}.quick-card.insurance h3{color:#38bdf8}
+.whatsapp-link{color:#25D366!important}.insurance-note{margin-top:12px;color:#94a3b8;font-size:.78rem;line-height:1.6}
 footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(max-width:850px){.contact-container,.quick-grid{grid-template-columns:1fr}nav{flex-direction:column;gap:15px}.nav-links{justify-content:center}}
 </style>
 </head>
@@ -24,21 +25,21 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 
 <section class="contact-section" id="direct-contact">
 <div class="container">
-<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type and continue in your browser. This page no longer uses <code>mailto:</code>, so it will not trigger the Windows mail-app chooser.</p></div>
+<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type, enter your details, and continue directly to WhatsApp. No email app is required.</p></div>
 <div class="contact-container">
 <div class="contact-info">
 <h2>Contact Rivaldo</h2>
 <p>Your enquiry comes to me first. Ministry, website-development and insurance enquiries are kept separate.</p>
-<div class="contact-item"><strong>Name:</strong><br>Rivaldo Kurbah</div>
+<div class="contact-item"><strong>WhatsApp:</strong><br><a class="whatsapp-link" href="https://wa.me/919862588386">+91 98625 88386</a></div>
 <div class="contact-item"><strong>Email:</strong><br><span id="public-email">kurbahrivaldo@gmail.com</span><br><button class="copy-btn" type="button" onclick="copyEmail()">Copy Email Address</button></div>
 <div class="contact-item"><strong>Location:</strong><br>Shillong, Meghalaya, India</div>
 <div class="social-links"><a href="https://github.com/cybsec-ops" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/rivaldo-kurbah-14ab55228/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/rivaldo.kurbah" target="_blank" rel="noopener">Facebook</a><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">Fiverr</a></div>
 </div>
 
 <div class="contact-form">
-<h2>Direct Enquiry</h2>
-<p>Complete the details below. When you continue, Gmail opens in the same browser with the message prepared for <strong>kurbahrivaldo@gmail.com</strong>. Use your browser Back button to return here.</p>
-<form id="enquiry-form" onsubmit="openBrowserEmail(event)">
+<h2>Direct WhatsApp Enquiry</h2>
+<p>Complete the details below. Your browser will open a WhatsApp chat to Rivaldo with the enquiry already prepared.</p>
+<form id="enquiry-form" onsubmit="openWhatsApp(event)">
 <label for="topic">What can I help you with?</label>
 <select id="topic" required>
 <option value="ministry">Save One Soul / Catholic Ministry</option>
@@ -46,11 +47,11 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 <option value="insurance">Life Insurance Assistance</option>
 </select>
 <input id="name" type="text" placeholder="Your Name" required>
-<input id="email" type="email" placeholder="Your Email" required>
+<input id="email" type="email" placeholder="Your Email (optional for follow-up)">
 <input id="phone" type="tel" placeholder="Phone / callback number (optional)">
 <textarea id="message" rows="6" placeholder="Tell me how I can help" required></textarea>
-<button type="submit">Continue in Browser</button>
-<p class="form-note">No information is submitted to Tata AIA from this form. Insurance enquiries are addressed to Rivaldo first. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
+<button type="submit">Continue on WhatsApp</button>
+<p class="form-note">No information is sent to Tata AIA from this form. Insurance enquiries come to Rivaldo first. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
 </form>
 </div>
 </div>
@@ -58,18 +59,13 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 </section>
 
 <section class="quick-links"><div class="container"><div class="quick-grid">
-<div class="quick-card ministry"><h3>✝️ Catholic Ministry</h3><p>Prayer intentions, Catholic resources, Mercy-project questions and ministry collaboration. Completely non-commercial.</p><a href="contact.html?topic=ministry#direct-contact">Start Ministry Enquiry</a></div>
-<div class="quick-card website"><h3>💻 Website Development</h3><p>Portfolio, business, ministry and organisation websites.</p><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">View Fiverr Gig</a></div>
-<div class="quick-card insurance"><h3>🛡️ Life Insurance Assistance</h3><p>General information and callback requests come to Rivaldo first. Official insurer channels are used where required.</p><a href="contact.html?topic=insurance#direct-contact">Start Insurance Enquiry</a></div>
+<div class="quick-card ministry"><h3>✝️ Catholic Ministry</h3><p>Prayer intentions, Catholic resources, Mercy-project questions and ministry collaboration. Completely non-commercial.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20am%20contacting%20you%20regarding%20the%20Save%20One%20Soul%20mission.">WhatsApp Ministry Contact</a></div>
+<div class="quick-card website"><h3>💻 Website Development</h3><p>Portfolio, business, ministry and organisation websites.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20am%20interested%20in%20building%20a%20website.%20I%20would%20like%20to%20discuss%20my%20project.">Discuss on WhatsApp</a><br><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">View Fiverr Gig</a></div>
+<div class="quick-card insurance"><h3>🛡️ Life Insurance Assistance</h3><p>General information and callback requests come to Rivaldo first. Official insurer channels are used where required.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20would%20like%20information%20about%20life%20insurance.%20Please%20contact%20me%20regarding%20my%20requirements.">WhatsApp Insurance Enquiry</a><p class="insurance-note">Insurance products are subject to terms and conditions, eligibility, underwriting, exclusions and the applicable policy documents.</p></div>
 </div></div></section>
 
 <footer><p>© 2026 Rivaldo Kurbah | Portfolio</p></footer>
 <script>
-const subjects={
- ministry:'Save One Soul Ministry Enquiry',
- website:'Website Development Enquiry',
- insurance:'Life Insurance Assistance / Callback Request'
-};
 const openings={
  ministry:'Hello Rivaldo, I am contacting you regarding the Save One Soul mission.',
  website:'Hello Rivaldo, I am interested in building a website.',
@@ -78,17 +74,17 @@ const openings={
 function applyTopicFromUrl(){
  const value=new URLSearchParams(window.location.search).get('topic');
  const select=document.getElementById('topic');
- if(value && subjects[value]) select.value=value;
+ if(value && openings[value]) select.value=value;
 }
-function openBrowserEmail(event){
+function openWhatsApp(event){
  event.preventDefault();
  const topic=document.getElementById('topic').value;
  const name=document.getElementById('name').value.trim();
  const email=document.getElementById('email').value.trim();
  const phone=document.getElementById('phone').value.trim();
  const message=document.getElementById('message').value.trim();
- const body=[openings[topic],'','Name: '+name,'Email: '+email,phone?'Phone / callback: '+phone:'','',message].filter(Boolean).join('\n');
- const url='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent('kurbahrivaldo@gmail.com')+'&su='+encodeURIComponent(subjects[topic])+'&body='+encodeURIComponent(body);
+ const lines=[openings[topic],'','Name: '+name,email?'Email: '+email:'',phone?'Phone / callback: '+phone:'','',message].filter(Boolean);
+ const url='https://wa.me/919862588386?text='+encodeURIComponent(lines.join('\n'));
  window.location.href=url;
 }
 async function copyEmail(){
