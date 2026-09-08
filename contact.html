@@ -25,21 +25,21 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 
 <section class="contact-section" id="direct-contact">
 <div class="container">
-<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type, enter your details, and continue directly to the WhatsApp chatbot. No email app is required.</p></div>
+<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type and continue on WhatsApp. WhatsApp opens separately so this portfolio page stays open in the original tab.</p></div>
 <div class="contact-container">
 <div class="contact-info">
 <h2>Contact Rivaldo</h2>
-<p>Your enquiry comes to me first. Ministry, website-development and insurance enquiries are kept separate.</p>
-<div class="contact-item"><strong>WhatsApp:</strong><br><a class="whatsapp-link" href="https://wa.me/919862588386">+91 98625 88386</a></div>
+<p>Catholic ministry enquiries go directly to my personal WhatsApp. Website-development and life-insurance enquiries are routed to the WhatsApp chatbot.</p>
+<div class="contact-item"><strong>Personal WhatsApp:</strong><br><a class="whatsapp-link" href="https://wa.me/919862588386" target="_blank" rel="noopener noreferrer">+91 98625 88386</a></div>
 <div class="contact-item"><strong>Email:</strong><br><span id="public-email">kurbahrivaldo@gmail.com</span><br><button class="copy-btn" type="button" onclick="copyEmail()">Copy Email Address</button></div>
 <div class="contact-item"><strong>Location:</strong><br>Shillong, Meghalaya, India</div>
 <div class="social-links"><a href="https://github.com/cybsec-ops" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/rivaldo-kurbah-14ab55228/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/rivaldo.kurbah" target="_blank" rel="noopener">Facebook</a><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">Fiverr</a></div>
 </div>
 
 <div class="contact-form">
-<h2>Direct Enquiry via WhatsApp Chatbot</h2>
-<p>Complete the details below. Your browser will open a WhatsApp chat to the enquiry chatbot at <strong>+91 93665 85286</strong> with your message already prepared.</p>
-<form id="enquiry-form" onsubmit="openWhatsAppChatbot(event)">
+<h2>Direct WhatsApp Enquiry</h2>
+<p>Complete the details below. <strong>Save One Soul / Catholic Ministry</strong> opens your message to Rivaldo's personal WhatsApp. <strong>Website Development</strong> and <strong>Life Insurance Assistance</strong> open the WhatsApp chatbot at <strong>+91 93665 85286</strong>.</p>
+<form id="enquiry-form" onsubmit="openWhatsAppEnquiry(event)">
 <label for="topic">What can I help you with?</label>
 <select id="topic" required>
 <option value="ministry">Save One Soul / Catholic Ministry</option>
@@ -50,8 +50,8 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 <input id="email" type="email" placeholder="Your Email (optional for follow-up)">
 <input id="phone" type="tel" placeholder="Phone / callback number (optional)">
 <textarea id="message" rows="6" placeholder="Tell me how I can help" required></textarea>
-<button type="submit">Continue to WhatsApp Chatbot</button>
-<p class="form-note">This direct enquiry is routed to the WhatsApp chatbot first. No information is sent to Tata AIA from this form. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
+<button type="submit">Continue on WhatsApp</button>
+<p class="form-note">WhatsApp opens in a separate tab/window. Ministry is non-commercial and goes directly to Rivaldo. Website and insurance enquiries go to the chatbot. No information is sent to Tata AIA from this form. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
 </form>
 </div>
 </div>
@@ -59,16 +59,17 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 </section>
 
 <section class="quick-links"><div class="container"><div class="quick-grid">
-<div class="quick-card ministry"><h3>✝️ Catholic Ministry</h3><p>Prayer intentions, Catholic resources, Mercy-project questions and ministry collaboration. Completely non-commercial.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20am%20contacting%20you%20regarding%20the%20Save%20One%20Soul%20mission.">WhatsApp Ministry Contact</a></div>
-<div class="quick-card website"><h3>💻 Website Development</h3><p>Portfolio, business, ministry and organisation websites.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20am%20interested%20in%20building%20a%20website.%20I%20would%20like%20to%20discuss%20my%20project.">Discuss on WhatsApp</a><br><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">View Fiverr Gig</a></div>
-<div class="quick-card insurance"><h3>🛡️ Life Insurance Assistance</h3><p>General information and callback requests come to Rivaldo first. Official insurer channels are used where required.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20would%20like%20information%20about%20life%20insurance.%20Please%20contact%20me%20regarding%20my%20requirements.">WhatsApp Insurance Enquiry</a><p class="insurance-note">Insurance products are subject to terms and conditions, eligibility, underwriting, exclusions and the applicable policy documents.</p></div>
+<div class="quick-card ministry"><h3>✝️ Catholic Ministry</h3><p>Prayer intentions, Catholic resources, Mercy-project questions and ministry collaboration. Completely non-commercial.</p><a class="whatsapp-link" href="https://wa.me/919862588386?text=Hello%20Rivaldo%2C%20I%20am%20contacting%20you%20regarding%20the%20Save%20One%20Soul%20mission." target="_blank" rel="noopener noreferrer">WhatsApp Rivaldo Directly</a></div>
+<div class="quick-card website"><h3>💻 Website Development</h3><p>Portfolio, business, ministry and organisation websites.</p><a class="whatsapp-link" href="https://wa.me/919366585286?text=Hello%2C%20I%20am%20interested%20in%20building%20a%20website.%20I%20would%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener noreferrer">Website Chatbot</a><br><a href="https://www.fiverr.com/s/RVmYayD" target="_blank" rel="noopener">View Fiverr Gig</a></div>
+<div class="quick-card insurance"><h3>🛡️ Life Insurance Assistance</h3><p>General information and callback requests are handled through the WhatsApp chatbot first. Official insurer channels are used where required.</p><a class="whatsapp-link" href="https://wa.me/919366585286?text=Hello%2C%20I%20would%20like%20information%20about%20life%20insurance." target="_blank" rel="noopener noreferrer">Insurance Chatbot</a><p class="insurance-note">Insurance products are subject to terms and conditions, eligibility, underwriting, exclusions and the applicable policy documents.</p></div>
 </div></div></section>
 
 <footer><p>© 2026 Rivaldo Kurbah | Portfolio</p></footer>
 <script>
+const personalNumber='919862588386';
 const chatbotNumber='919366585286';
 const openings={
- ministry:'Hello, I am contacting you regarding the Save One Soul mission.',
+ ministry:'Hello Rivaldo, I am contacting you regarding the Save One Soul mission.',
  website:'Hello, I am interested in building a website.',
  insurance:'Hello, I would like information about life insurance.'
 };
@@ -77,16 +78,19 @@ function applyTopicFromUrl(){
  const select=document.getElementById('topic');
  if(value && openings[value]) select.value=value;
 }
-function openWhatsAppChatbot(event){
+function openWhatsAppEnquiry(event){
  event.preventDefault();
- const topic=document.getElementById('topic').value;
+ const select=document.getElementById('topic');
+ const topic=select.value;
  const name=document.getElementById('name').value.trim();
  const email=document.getElementById('email').value.trim();
  const phone=document.getElementById('phone').value.trim();
  const message=document.getElementById('message').value.trim();
- const lines=[openings[topic],'','Enquiry type: '+document.getElementById('topic').options[document.getElementById('topic').selectedIndex].text,'Name: '+name,email?'Email: '+email:'',phone?'Phone / callback: '+phone:'','Message: '+message].filter(Boolean);
- const url='https://wa.me/'+chatbotNumber+'?text='+encodeURIComponent(lines.join('\n'));
- window.location.href=url;
+ const lines=[openings[topic],'','Enquiry type: '+select.options[select.selectedIndex].text,'Name: '+name,email?'Email: '+email:'',phone?'Phone / callback: '+phone:'','Message: '+message].filter(Boolean);
+ const destination=topic==='ministry'?personalNumber:chatbotNumber;
+ const url='https://wa.me/'+destination+'?text='+encodeURIComponent(lines.join('\n'));
+ const newTab=window.open(url,'_blank','noopener,noreferrer');
+ if(newTab){newTab.opener=null;}
 }
 async function copyEmail(){
  const email='kurbahrivaldo@gmail.com';
