@@ -1,0 +1,64 @@
+name: Add faith & ministry portfolio item
+description: Owner-only publishing form for adding formation credentials or ministry work to the Faith & Creative Ministry page.
+title: "[Faith Portfolio] "
+labels:
+  - portfolio-faith
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only while signed in as **KurbahTech**. The publishing workflow ignores submissions from other accounts.
+
+        For **Image**, drag and drop the image into the field or paste a direct HTTPS image URL.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Item type
+      options:
+        - Faith Formation / Credential
+        - Catholic Poster / Event Design
+        - Church / Youth Ministry Communication
+        - Bible Convention / Prayer Meeting
+        - Divine Mercy / Evangelisation
+        - Faith-based Website / Digital Work
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Certificate or ministry project title
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short public description shown on the portfolio card.
+      placeholder: Brief description...
+    validations:
+      required: false
+  - type: textarea
+    id: image
+    attributes:
+      label: Image
+      description: Drag and drop the image here, or paste a direct HTTPS image URL.
+      placeholder: Drag and drop an image here
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Certificate / project URL
+      description: Optional official certificate, project, event, or ministry URL.
+      placeholder: https://...
+    validations:
+      required: false
+  - type: input
+    id: link_label
+    attributes:
+      label: Link label
+      description: Optional button wording such as View certificate, View project, or Learn more.
+      placeholder: View certificate
+    validations:
+      required: false
