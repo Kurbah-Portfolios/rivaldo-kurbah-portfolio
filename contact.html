@@ -25,7 +25,7 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 
 <section class="contact-section" id="direct-contact">
 <div class="container">
-<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type, enter your details, and continue directly to WhatsApp. No email app is required.</p></div>
+<div class="page-intro"><h1>How can I help you today?</h1><p>Choose your enquiry type, enter your details, and continue directly to the WhatsApp chatbot. No email app is required.</p></div>
 <div class="contact-container">
 <div class="contact-info">
 <h2>Contact Rivaldo</h2>
@@ -37,9 +37,9 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 </div>
 
 <div class="contact-form">
-<h2>Direct WhatsApp Enquiry</h2>
-<p>Complete the details below. Your browser will open a WhatsApp chat to Rivaldo with the enquiry already prepared.</p>
-<form id="enquiry-form" onsubmit="openWhatsApp(event)">
+<h2>Direct Enquiry via WhatsApp Chatbot</h2>
+<p>Complete the details below. Your browser will open a WhatsApp chat to the enquiry chatbot at <strong>+91 93665 85286</strong> with your message already prepared.</p>
+<form id="enquiry-form" onsubmit="openWhatsAppChatbot(event)">
 <label for="topic">What can I help you with?</label>
 <select id="topic" required>
 <option value="ministry">Save One Soul / Catholic Ministry</option>
@@ -50,8 +50,8 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 <input id="email" type="email" placeholder="Your Email (optional for follow-up)">
 <input id="phone" type="tel" placeholder="Phone / callback number (optional)">
 <textarea id="message" rows="6" placeholder="Tell me how I can help" required></textarea>
-<button type="submit">Continue on WhatsApp</button>
-<p class="form-note">No information is sent to Tata AIA from this form. Insurance enquiries come to Rivaldo first. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
+<button type="submit">Continue to WhatsApp Chatbot</button>
+<p class="form-note">This direct enquiry is routed to the WhatsApp chatbot first. No information is sent to Tata AIA from this form. Insurance products remain subject to applicable terms, eligibility, underwriting, exclusions and policy documents.</p>
 </form>
 </div>
 </div>
@@ -66,25 +66,26 @@ footer{background:#020617;text-align:center;padding:20px;color:#cbd5e1}@media(ma
 
 <footer><p>© 2026 Rivaldo Kurbah | Portfolio</p></footer>
 <script>
+const chatbotNumber='919366585286';
 const openings={
- ministry:'Hello Rivaldo, I am contacting you regarding the Save One Soul mission.',
- website:'Hello Rivaldo, I am interested in building a website.',
- insurance:'Hello Rivaldo, I would like information about life insurance.'
+ ministry:'Hello, I am contacting you regarding the Save One Soul mission.',
+ website:'Hello, I am interested in building a website.',
+ insurance:'Hello, I would like information about life insurance.'
 };
 function applyTopicFromUrl(){
  const value=new URLSearchParams(window.location.search).get('topic');
  const select=document.getElementById('topic');
  if(value && openings[value]) select.value=value;
 }
-function openWhatsApp(event){
+function openWhatsAppChatbot(event){
  event.preventDefault();
  const topic=document.getElementById('topic').value;
  const name=document.getElementById('name').value.trim();
  const email=document.getElementById('email').value.trim();
  const phone=document.getElementById('phone').value.trim();
  const message=document.getElementById('message').value.trim();
- const lines=[openings[topic],'','Name: '+name,email?'Email: '+email:'',phone?'Phone / callback: '+phone:'','',message].filter(Boolean);
- const url='https://wa.me/919862588386?text='+encodeURIComponent(lines.join('\n'));
+ const lines=[openings[topic],'','Enquiry type: '+document.getElementById('topic').options[document.getElementById('topic').selectedIndex].text,'Name: '+name,email?'Email: '+email:'',phone?'Phone / callback: '+phone:'','Message: '+message].filter(Boolean);
+ const url='https://wa.me/'+chatbotNumber+'?text='+encodeURIComponent(lines.join('\n'));
  window.location.href=url;
 }
 async function copyEmail(){
