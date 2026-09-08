@@ -1,0 +1,48 @@
+name: Publish portfolio content
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    if: >-
+      github.event.issue.user.login == 'KurbahTech' &&
+      (contains(github.event.issue.labels.*.name, 'portfolio-certificate') ||
+       contains(github.event.issue.labels.*.name, 'portfolio-faith'))
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_BODY: ${{ github.event.issue.body }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      CONTENT_KIND: ${{ contains(github.event.issue.labels.*.name, 'portfolio-certificate') && 'certificate' || 'faith' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Publish submitted item
+        run: python .github/scripts/publish_portfolio_item.py
+
+      - name: Commit published content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data images
+          if git diff --cached --quiet; then
+            echo "No publishable changes were produced."
+            exit 1
+          fi
+          git commit -m "Publish portfolio content from issue #${ISSUE_NUMBER}"
+          git push origin HEAD:main
+
+      - name: Confirm publication
+        run: |
+          gh issue comment "${ISSUE_NUMBER}" --repo "${GITHUB_REPOSITORY}" --body "Published successfully to the portfolio. GitHub Pages may take a short time to refresh."
+          gh issue close "${ISSUE_NUMBER}" --repo "${GITHUB_REPOSITORY}" --reason completed
