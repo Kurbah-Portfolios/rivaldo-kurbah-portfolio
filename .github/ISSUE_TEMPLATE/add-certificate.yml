@@ -1,8 +1,6 @@
 name: Add portfolio certificate
 description: Owner-only publishing form for adding a certificate to the Certifications page.
 title: "[Portfolio Certificate] "
-labels:
-  - portfolio-certificate
 body:
   - type: markdown
     attributes:
